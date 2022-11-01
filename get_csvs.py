@@ -99,6 +99,8 @@ def getSessionData(session, driver, do_pos=False, do_cd=False, do_laps=False):
         laps = session.laps.pick_driver(driver)
         with open('%s_%s_laps_%s.csv' % (gp_name, session_type, driver), 'w', encoding='UTF8') as f:
             f.write(laps.to_csv())
+        
+        #lap = laps.pick_fastest()
         #print(laps)
         #print(laps.to_csv())
 
